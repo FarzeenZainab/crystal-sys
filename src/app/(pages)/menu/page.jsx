@@ -1,5 +1,6 @@
 "use client";
 
+import Loading from "@/components/loading";
 import CategoryItem from "./category-item";
 import useFetch from "@/hooks/use-fetch";
 
@@ -21,23 +22,13 @@ const MenuPage = () => {
                 imgURL={category?.strCategoryThumb}
                 title={category?.strCategory}
                 description={category?.strCategoryDescription}
+                redirectTo={`/menu/meal?category=${category?.strCategory}`}
               />
             );
           })}
       </div>
 
-      {loading && (
-        <div className="w-full block my-20">
-          <div
-            class="h-8 w-8 animate-spin rounded-full border-4 border-solid border-current border-r-transparent align-[-0.125em] motion-reduce:animate-[spin_1.5s_linear_infinite] mx-auto"
-            role="status"
-          >
-            <span class="!absolute !-m-px !h-px !w-px !overflow-hidden !whitespace-nowrap !border-0 !p-0 ![clip:rect(0,0,0,0)]">
-              Loading...
-            </span>
-          </div>
-        </div>
-      )}
+      {loading && <Loading />}
 
       {!data?.categories?.length && !loading && <p>No record found</p>}
 

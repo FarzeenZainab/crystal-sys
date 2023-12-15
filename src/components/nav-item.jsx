@@ -1,12 +1,14 @@
 "use client";
 import Link from "next/link";
 import { cn } from "@/lib/utils";
-import { usePathname } from "next/navigation";
+import { usePathname, useSelectedLayoutSegments } from "next/navigation";
 
 const NavItem = ({ title, href }) => {
   const pathName = usePathname();
+  const segments = useSelectedLayoutSegments();
 
-  const isActive = href === pathName;
+  const isActive =
+    href === pathName || segments.includes(href.replace(/\//g, ""));
 
   return (
     <li>
