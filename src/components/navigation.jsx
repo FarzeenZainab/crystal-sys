@@ -26,7 +26,7 @@ const Navigation = () => {
   ];
   return (
     <nav>
-      <ul className="flex items-center gap-8">
+      <ul className="flex items-center gap-4">
         {pages.map((page) => (
           <NavItem key={page.title} title={page?.title} href={page?.href} />
         ))}

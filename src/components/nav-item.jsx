@@ -13,9 +13,8 @@ const NavItem = ({ title, href }) => {
       <Link
         href={href}
         className={cn(
-          "block py-2 px-3 rounded text-sm min-w-[100px] text-center border-2 border-transparent",
-          isActive &&
-            "bg-blue-100 rounded-[8px] shadow-sm border-blue-500 border-2"
+          "block py-2 px-3 rounded-[8px] text-sm min-w-[100px] text-center border-2 hover:bg-green-100 hover:border-2 hover:border-green-500 border-transparent",
+          isActive && "bg-green-100 shadow-sm border-green-500 border-2"
         )}
       >
         {title}

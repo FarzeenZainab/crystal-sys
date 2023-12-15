@@ -14,7 +14,7 @@ export default function RootLayout({ children }) {
         <Header />
 
         {/* main */}
-        <div className="p-6">{children}</div>
+        <div className="p-6 page-max-width">{children}</div>
       </body>
     </html>
   );
