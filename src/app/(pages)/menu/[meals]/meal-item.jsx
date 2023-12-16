@@ -2,7 +2,7 @@ import AddToFavourites from "@/components/add-to-favourites";
 
 import { cn } from "@/lib/utils";
 
-const ListItem = ({ imgURL, title, titleClasses }) => {
+const ListItem = ({ imgURL, title, titleClasses, id }) => {
   return (
     <div className="group bg-zinc-100 rounded-2xl hover:shadow-lg overflow-hidden transition-all duration-300 border-2 border-zinc-300 border-transparent hover:border-green-500">
       <div className="relative">
@@ -12,7 +12,7 @@ const ListItem = ({ imgURL, title, titleClasses }) => {
         >
           {/* content */}
           <div className="relative z-10 h-full flex items-end">
-            <AddToFavourites />
+            <AddToFavourites mealId={id} />
 
             <h2 className={cn(titleClasses, "mb-2 text-white p-4 pb-5")}>
               {title ?? "Sandwich"}

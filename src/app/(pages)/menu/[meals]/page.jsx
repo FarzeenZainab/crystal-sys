@@ -22,6 +22,7 @@ const Meals = () => {
             return (
               <MealItem
                 key={meal?.idMeal}
+                id={meal?.idMeal}
                 altText={`image of ${meal?.strMeal}`}
                 imgURL={meal?.strMealThumb}
                 title={meal?.strMeal}
