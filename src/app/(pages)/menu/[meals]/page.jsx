@@ -14,6 +14,7 @@ const Meals = () => {
 
   return (
     <>
+      <h2 className="my-4">Dishes in {categoryId}</h2>
       <div className="grid grid-cols-3 gap-6 mx-auto">
         {data &&
           !loading &&
